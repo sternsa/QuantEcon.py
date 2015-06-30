@@ -312,7 +312,7 @@ class MarkovChain(object):
             k = len(init)  # init is an array
             num_reps = k  # make num_reps not None
             init_states = np.asarray(init, dtype=int)
-        except:  # init is a scalar(int) or None
+        except TypeError:  # init is a scalar(int) or None
             k = 1 if num_reps is None else num_reps
             if init is None:
                 init_states = random_state.randint(self.n, size=k)
