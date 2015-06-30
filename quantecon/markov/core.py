@@ -315,7 +315,7 @@ class MarkovChain(object):
         except:  # init is a scalar(int) or None
             k = 1 if num_reps is None else num_reps
             if init is None:
-                init_states = np.random.randint(self.n, size=k)
+                init_states = random_state.randint(self.n, size=k)
             elif isinstance(init, int):
                 init_states = np.ones(k, dtype=int) * init
             else:
