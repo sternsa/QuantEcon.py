@@ -87,8 +87,8 @@ classes*. For each :math:`S_m` and each :math:`i \in S_m`, we have
 from __future__ import division
 import numpy as np
 from fractions import gcd
-from ..graph_tools import DiGraph
 from .gth_solve import gth_solve
+from ..graph_tools import DiGraph
 
 # -Check if Numba is Available- #
 from ..external import numba_installed, jit
